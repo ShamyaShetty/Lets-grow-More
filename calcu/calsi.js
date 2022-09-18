@@ -1,4 +1,4 @@
-document.getElementById("answer").readOnly = true; //set this attribute in Html file
+document.getElementById("answer").readOnly = true; 
 let screen = document.getElementById("answer");
 buttons = document.querySelectorAll("button");
 let screenValue = "";
@@ -13,7 +13,7 @@ for (item of buttons) {
             screenValue = "";
             screen.value = screenValue;
         } else if (buttonText == "=") {
-            checkForBracketMulti(); // automatically evaluates if no brackets
+            checkForBracketMulti(); 
         } else {
             screenValue += buttonText;
             screen.value = screenValue;
@@ -85,7 +85,6 @@ function addStr(str, index, stringToAdd) {
 }
 
 function checkForBracketMulti() {
-    // Check if there's a number directly infront of a bracket
     if (
         screen.value.includes("(") &&
         !isNaN(screen.value.charAt(screen.value.indexOf("(") - 1))
